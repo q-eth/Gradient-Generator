@@ -3,12 +3,6 @@ import math
 import os
 
 def hex_to_rgba(hex_color):
-    """
-    Преобразует шестнадцатеричный код цвета в формат RGBA.
-
-    :param hex_color: Цвет в шестнадцатеричном формате (#RRGGBB или #RRGGBBAA)
-    :return: Кортеж (R, G, B, A)
-    """
     hex_color = hex_color.lstrip('#')
     if len(hex_color) == 6:
         r, g, b = int(hex_color[0:2], 16), int(hex_color[2:4], 16), int(hex_color[4:6], 16)
@@ -20,16 +14,6 @@ def hex_to_rgba(hex_color):
     return (r, g, b, a)
 
 def generate_gradient(width, height, colors, angle, output_path):
-    """
-    Генерирует изображение градиента с заданным углом наклона.
-
-    :param width: Ширина изображения
-    :param height: Высота изображения
-    :param colors: Список цветов в формате [(hex_color, позиция), ...],
-                   где hex_color — шестнадцатеричный цвет, позиция — число от 0 до 1
-    :param angle: Угол наклона градиента в градусах
-    :return: Изображение с градиентом
-    """
     image = Image.new("RGBA", (width, height))
     pixels = image.load()
 
