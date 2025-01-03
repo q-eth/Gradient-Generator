@@ -72,5 +72,5 @@ Reqiress the `Pillow` libary to be installed.
           ("#000000FF", 1.0),\
     ]\
 >    angle = 0\
->    output_path = "C:\\Users\\User\\Pictures\\gradient.png"\
+>    output_path = "C:\\\Users\\\User\\\Pictures\\\gradient.png"\
 >    generate_gradient(width, height, colors, angle, output_path)
