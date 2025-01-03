@@ -63,3 +63,14 @@ The `generate_gradient` function creates an image of a gradient based on user-sp
 ### Limitations
 Reqiress the `Pillow` libary to be installed.
 
+## Example of use
+> width = 1920\
+> height = 1080\
+>   colors = [\
+          ("#63008780", 0.0),\
+          ("12014EC0", 0.5),\
+          ("#000000FF", 1.0),\
+    ]\
+>    angle = 0\
+>    output_path = "C:\\Users\\User\\Pictures\\gradient.png"\
+>    generate_gradient(width, height, colors, angle, output_path)
