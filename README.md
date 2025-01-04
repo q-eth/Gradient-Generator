@@ -41,9 +41,9 @@ print(color)  # Output: (255, 87, 51, 128)
 Incorrect:
 ```python
 try:
-color = hex_to_rgba("#MF5733")  # M in the hexadecimal number
+  color = hex_to_rgba("#MF5733")  # M in the hexadecimal number
 except ValueError as err:
-print(err)  # Output: "ValueError: invalid literal for int() with base 16: 'MF'"
+  print(err)  # Output: "ValueError: invalid literal for int() with base 16: 'MF'"
 ```
 ## generate_gradient
 The `generate_gradient` function creates an image of a gradient based on user-specified colors, positions, size, and angle. The generated gradient is saved as a PNG file to a desired path.
@@ -70,7 +70,7 @@ The `generate_gradient` function creates an image of a gradient based on user-sp
 ### Return
 `None`
 ### Limitations
-Reqiress the `Pillow` libary to be installed.
+Reqires the `Pillow` libary to be installed.
 
 ## Example of use
 ```python
@@ -79,9 +79,9 @@ height = 1080
 colors = [
   ("#63008780", 0.0),
   ("#12014EC0", 0.5),
-  ("#000000FF", 1.0),
+  ("#000000FF", 1.0)
 ]
 angle = 0
-output_path = "C:\\\Users\\\User\\\Pictures\\\gradient.png"
+output_path = "C:\\Users\\User\\Pictures\\gradient.png"
 generate_gradient(width, height, colors, angle, output_path)
 ```
