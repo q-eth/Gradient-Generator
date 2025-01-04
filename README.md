@@ -24,19 +24,27 @@ The `hex_to_rgba` function converts a hexadecimal color code into an RGBA (Red, 
 `ValueError`: If the input string is not in the correct format or length.
 ### Examples of use
 Correct without alpha:
->color = hex_to_rgba("#FF5733")\
->print(color)  # Output: (255, 87, 51, 255)
-
+```python
+color = hex_to_rgba("#FF5733")
+print(color)  # Output: (255, 87, 51, 255)
+```
 Correct with alpha:
->color = hex_to_rgba("#FF573380")\
->print(color)  # Output: (255, 87, 51, 128)
-
+```python
+color = hex_to_rgba("#FF573380")
+print(color)  # Output: (255, 87, 51, 128)
+```
+Correct without `#`:
+```python
+color = hex_to_rgba("FF573380")
+print(color)  # Output: (255, 87, 51, 128)
+```
 Incorrect:
->try:\
->color = hex_to_rgba("#MF5733")  # M in the hexadecimal number\
->except ValueError as err:\
-> print(err)  # Output: "ValueError: invalid literal for int() with base 16: 'MF'"
-
+```python
+try:
+color = hex_to_rgba("#MF5733")  # M in the hexadecimal number
+except ValueError as err:
+print(err)  # Output: "ValueError: invalid literal for int() with base 16: 'MF'"
+```
 ## generate_gradient
 The `generate_gradient` function creates an image of a gradient based on user-specified colors, positions, size, and angle. The generated gradient is saved as a PNG file to a desired path.
 ### Signature
@@ -48,10 +56,11 @@ The `generate_gradient` function creates an image of a gradient based on user-sp
 #### Color: A string in hexadecimal format (**#RRGGBB** or **#RRGGBBAA**).
 #### Position: A float between 0.0 and 1.0 indicating the relative position of the color in the gradient.
 #### Example:
->("#FF0000FF", 0.0),  # Red at position 0\
->("#00FF0080", 0.5),  # Semi-transparent Green at position 0,5\
->("#0000FFFF", 1.0)   # Blue at position 1
-
+```python
+("#FF0000FF", 0.0),  # Red at position 0
+("#00FF0080", 0.5),  # Semi-transparent Green at position 0,5
+("#0000FFFF", 1.0)   # Blue at position 1
+```
 `angle (float)`: The angle of the gradient in degrees.
 >Example: 45.0 (45 degrees)
 
@@ -64,13 +73,15 @@ The `generate_gradient` function creates an image of a gradient based on user-sp
 Reqiress the `Pillow` libary to be installed.
 
 ## Example of use
-> width = 1920\
-> height = 1080\
->   colors = [\
-          ("#63008780", 0.0),\
-          ("12014EC0", 0.5),\
-          ("#000000FF", 1.0),\
-    ]\
->    angle = 0\
->    output_path = "C:\\\Users\\\User\\\Pictures\\\gradient.png"\
->    generate_gradient(width, height, colors, angle, output_path)
+```python
+width = 1920
+height = 1080
+colors = [
+  ("#63008780", 0.0),
+  ("#12014EC0", 0.5),
+  ("#000000FF", 1.0),
+]
+angle = 0
+output_path = "C:\\\Users\\\User\\\Pictures\\\gradient.png"
+generate_gradient(width, height, colors, angle, output_path)
+```
