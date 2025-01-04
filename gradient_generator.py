@@ -61,11 +61,11 @@ if __name__ == "__main__":
     colors = [
         ("#63008780", 0.0),
         ("#12014EC0", 0.5),
-        ("#000000FF", 1.0),
+        ("#000000FF", 1.0)
     ]
 
     angle = 0
 
-    output_path = "insert your path here with '\\' instead of '\'. For example: C:\\Users\\User\\Desktop\\gradient1.png"
+    output_path = "insert your path here"
 
     generate_gradient(width, height, colors, angle, output_path)
