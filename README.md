@@ -85,3 +85,5 @@ angle = 0
 output_path = "C:\\Users\\User\\Pictures\\gradient.png"
 generate_gradient(width, height, colors, angle, output_path)
 ```
+## Result
+![alt text](https://raw.githubusercontent.com/q-eth/Gradient-Generator/b36e017/gradient.png)
