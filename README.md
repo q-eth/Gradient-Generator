@@ -52,7 +52,7 @@ The `generate_gradient` function creates an image of a linear gradient based on 
 ### Parameters
 `width (int)`: The width of the generated image in pixels.\
 `height (int)`: The height of the generated image in pixels.\
-`colors (list[tuple[str, float]])`: A list of tuples specifying the colors and their positions along the gradient.
+`colors (list[tuple[color (str), position (float)]])`: A list of tuples specifying the colors and their positions along the gradient.
 #### Color: A string in hexadecimal format (**#RRGGBB** or **#RRGGBBAA**).
 #### Position: A float between 0.0 and 1.0 indicating the relative position of the color in the gradient.
 #### Example:
