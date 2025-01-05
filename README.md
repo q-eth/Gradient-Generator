@@ -33,7 +33,7 @@ Correct with alpha:
 color = hex_to_rgba("#FF573380")
 print(color)  # Output: (255, 87, 51, 128)
 ```
-Correct without `#`:
+Correct without `#` (but I recommend to follow the standard notations and write `#`):
 ```python
 color = hex_to_rgba("FF573380")
 print(color)  # Output: (255, 87, 51, 128)
