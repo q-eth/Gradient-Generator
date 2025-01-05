@@ -46,7 +46,7 @@ except ValueError as err:
   print(err)  # Output: "ValueError: invalid literal for int() with base 16: 'MF'"
 ```
 ## generate_gradient
-The `generate_gradient` function creates an image of a gradient based on user-specified colors, positions, size, and angle. The generated gradient is saved as a PNG file to a desired path.
+The `generate_gradient` function creates an image of a linear gradient based on user-specified colors, positions, size, and angle. The generated gradient is saved as a PNG file to a desired path.
 ### Signature
 `def generate_gradient(width: int, height: int, colors: list[tuple[str, float]], angle: float, output_path: str) -> None`
 ### Parameters
