@@ -3,7 +3,8 @@ import math
 import os
 
 def hex_to_rgba(hex_color):
-    hex_color = hex_color.lstrip('#')
+    if hex_color.startswith('#'):
+        hex_color = hex_color.lstrip('#')
     if len(hex_color) == 6:
         r, g, b = int(hex_color[0:2], 16), int(hex_color[2:4], 16), int(hex_color[4:6], 16)
         a = 255
