@@ -72,7 +72,7 @@ The `generate_gradient` function creates an image of a linear gradient based on 
 ### Limitations
 Requires the `Pillow` libary to be installed.
 
-## Example of use
+# Example of use
 ```python
 width = 1920
 height = 1080
@@ -85,5 +85,5 @@ angle = 56
 output_path = "C:\\Users\\User\\Pictures\\gradient56.png"
 generate_gradient(width, height, colors, angle, output_path)
 ```
-## Result
+# Result
 ![alt text](https://raw.githubusercontent.com/q-eth/Gradient-Generator/5a631ab/gradient56.png)
