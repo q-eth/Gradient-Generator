@@ -62,7 +62,7 @@ The `generate_gradient` function creates an image of a linear gradient based on 
 ("#0000FFFF", 1.0)   # Blue at position 1
 ```
 `angle (float)`: The angle of the gradient in degrees (CW).
->Example: 45.0 (45 degrees)
+>Example: 45.0 (45 degrees clockwise)
 
 `output_path (str)`: The full file path (including the name) where the image will be saved (replace `\` with `\\`).
 >Example: "C:\\\Users\\\User\\\Pictures\\\gradient.png"
