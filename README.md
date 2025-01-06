@@ -70,7 +70,7 @@ The `generate_gradient` function creates an image of a linear gradient based on 
 ### Return
 `None`
 ### Limitations
-Reqires the `Pillow` libary to be installed.
+Requires the `Pillow` libary to be installed.
 
 ## Example of use
 ```python
