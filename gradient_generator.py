@@ -51,7 +51,7 @@ def generate_gradient(width, height, colors, angle, output_path):
                     break
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    b_image = image.filter(ImageFilter.GaussianBlur(radius = 3))
+    b_image = image.filter(ImageFilter.GaussianBlur(radius = 10))
     b_image.save(output_path, "PNG")
     print(f"Your gradient is saved as: {output_path}")
 
@@ -66,7 +66,7 @@ if __name__ == "__main__":
         ("#000000FF", 1.0)
     ]
 
-    angle = -20
+    angle = 56
 
     output_path = "C:\\Users\\Serjei\\Pictures\\gradient.png"
 
