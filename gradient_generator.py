@@ -1,9 +1,10 @@
-from PIL import Image
+from PIL import Image, ImageFilter
 import math
 import os
 
 def hex_to_rgba(hex_color):
-    hex_color = hex_color.lstrip('#')
+    if hex_color.startswith('#'):
+        hex_color = hex_color.lstrip('#')
     if len(hex_color) == 6:
         r, g, b = int(hex_color[0:2], 16), int(hex_color[2:4], 16), int(hex_color[4:6], 16)
         a = 255
@@ -50,7 +51,8 @@ def generate_gradient(width, height, colors, angle, output_path):
                     break
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    image.save(output_path, "PNG")
+    b_image = image.filter(ImageFilter.GaussianBlur(radius = 3))
+    b_image.save(output_path, "PNG")
     print(f"Your gradient is saved as: {output_path}")
 
 if __name__ == "__main__":
@@ -59,13 +61,13 @@ if __name__ == "__main__":
     height = 1080
 
     colors = [
-        ("#63008780", 0.0),
-        ("#12014EC0", 0.5),
-        ("#000000FF", 1.0),
+        ("#FF000033", 0.0),
+        ("#00FF0080", 0.3),
+        ("#FFC90E4D", 1.0),
     ]
 
-    angle = 0
+    angle = -20
 
-    output_path = "insert your path here with '\\' instead of '\'. For example: C:\\Users\\User\\Desktop\\gradient1.png"
+    output_path = "C:\\Users\\Serjei\\Pictures\\gradient.png"
 
     generate_gradient(width, height, colors, angle, output_path)
